@@ -1,0 +1,11 @@
+jdk :
+  -openjdk17
+
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+
+install:
+  - FILE = "-Dfile=cameralib-release.aar"
+  - mvn install:install-file -DgroupId=com.github.mynameisnabil -DartifactId=CameraLibraryP -Dversion=1.0.0 -Dpackaging=aar -DgeneratePom=true
+
+
